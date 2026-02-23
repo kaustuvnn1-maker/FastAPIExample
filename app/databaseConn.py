@@ -6,7 +6,8 @@ try:
     #     user="kaustuvdash",
     #     password=""
     # )
-    conn = psycopg.connect("postgresql://fastapidatabase_7okt_user:E3uExDiRuJXhZPDXne0tIDCJwWwjKJHt@dpg-d6bvf33h46gs738b320g-a/fastapidatabase_7okt")
+    conn = psycopg.connect("postgresql://fastapidatabase_7okt_user:E3uExDiRuJXhZPDXne0tIDCJwWwjKJHt@dpg-d6bvf33h46gs738b320g-a.oregon-postgres.render.com:5432/fastapidatabase_7okt",
+                           sslmode="require")
     cursor = conn.cursor()
     print("Database connection was successful")
 except Exception as error:
